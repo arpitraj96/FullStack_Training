@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Table: Styling Even and Odd Cells</title>
+    <style>
+        /* Style the even rows (tr) */
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        /* Style the odd rows (tr) */
+        
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        /* Style even cells (td) within even rows */
+        
+        tr:nth-child(even) td:nth-child(even) {
+            color: red;
+            font-weight: bold;
+        }
+        /* Style odd cells (td) within odd rows */
+        
+        tr:nth-child(odd) td:nth-child(odd) {
+            color: blue;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+

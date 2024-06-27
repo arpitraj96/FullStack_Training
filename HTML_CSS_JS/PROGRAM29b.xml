@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Define how the output should look like -->
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>CD Catalog</title>
+      </head>
+      <body>
+        <h1>CD Catalog</h1>
+        <table border="1">
+          <tr>
+            <th>Artist</th>
+            <th>Title</th>
+          </tr>
+          <!-- Use XSLT for-each to loop through CD elements -->
+          <xsl:for-each select="CD_catalog/CD">
+            <tr>
+              <!-- Extract values for Artist and Title elements -->
+              <td><xsl:value-of select="ARTIST"/></td>
+              <td><xsl:value-of select="TITLE"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </body>
+    </html>
+  </xsl:template>
+
+</xsl:stylesheet>

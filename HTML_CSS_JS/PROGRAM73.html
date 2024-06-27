@@ -1,0 +1,44 @@
+// Simulated asynchronous functions that return Promises
+function fetchUserData(): Promise<{ username: string }> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({ username: "john_doe" });
+        }, 2000); // Simulate a 2-second delay
+    });
+}
+
+function fetchUserPosts(username: string): Promise<string[]> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([`${username}'s post 1`, `${username}'s post 2`]);
+        }, 1500); // Simulate a 1.5-second delay
+    });
+}
+
+function fetchPostDetails(post: string): Promise<string> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(`Details for post: ${post}`);
+        }, 1000); // Simulate a 1-second delay
+    });
+}
+
+// Chain promises together
+fetchUserData()
+    .then((userData) => {
+        console.log("User Data:", userData);
+        return fetchUserPosts(userData.username);
+    })
+    .then((userPosts) => {
+        console.log("User Posts:", userPosts);
+        const firstPost = userPosts[0];
+        return fetchPostDetails(firstPost);
+    })
+    .then((postDetails) => {
+        console.log("Post Details:", postDetails);
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    });
+
+console.log("Fetching user data and posts...");

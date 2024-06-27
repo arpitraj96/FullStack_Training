@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paragraph and Line Break Example</title>
+</head>
+<body>
+<h1>Paragraph and Line Break Example</h1>
+
+<p>This is a paragraph of text. It will be displayed as a block of content.</p>
+
+<p>This is another paragraph. Here's a line break inserted using the &lt;br&gt; tag:</p>
+<p>This text is on a new line because of the line break.</p>
+
+<p>You can use paragraphs and line breaks to structure your content.</p>
+<p>Just remember that paragraphs are separate blocks, while line breaks only move to the next line within a paragraph.</p>
+<audio controls>
+  <source src="audiofile.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

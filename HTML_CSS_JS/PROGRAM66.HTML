@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Strings in ES6</title>
+</head>
+<body>
+    <h1>Template Strings in ES6</h1>
+
+    <script>
+        // ES6 template string example
+        const firstName = "John";
+        const lastName = "Doe";
+        const age = 30;
+
+        // Using template string to create a formatted string
+        const message = `My name is ${firstName} ${lastName}, and I am ${age} years old.`;
+
+        // Display the message in an HTML element
+        const outputElement = document.createElement("p");
+        outputElement.textContent = message;
+        document.body.appendChild(outputElement);
+    </script>
+</body>
+</html>

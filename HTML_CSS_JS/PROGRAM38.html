@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS ID and Class Selectors Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="site-title">My Website</h1>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>Featured Content</h2>
+            <p>This is the featured content of the website.</p>
+        </section>
+        <section>
+            <h2>Latest News</h2>
+            <p>Check out the latest news and updates.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+Now, let's create the styles.css file to apply styles using both CSS ID and class selectors:
+
+/* Apply styles to the site title using the ID selector */
+#site-title {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Apply styles to the main navigation menu using the class selector */
+.main-menu {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Apply styles to the main content area using the class selector */
+.content {
+    padding: 20px;
+}
+
+/* Apply styles to the footer using the class selector */
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}

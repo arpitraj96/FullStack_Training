@@ -1,0 +1,29 @@
+// Simulated asynchronous functions that return Promises with delays
+function fetchFromService1(): Promise<string> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data from Service 1");
+        }, 2000); // Simulate a 2-second delay
+    });
+}
+
+function fetchFromService2(): Promise<string> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data from Service 2");
+        }, 1500); // Simulate a 1.5-second delay
+    });
+}
+
+// Use Promise.race() to get the result of the first resolved Promise
+const racePromises = [fetchFromService1(), fetchFromService2()];
+
+Promise.race(racePromises)
+    .then((result) => {
+        console.log("The first resolved Promise:", result);
+    })
+    .catch((error) => {
+        console.error("Error:", error); // This won't be executed in this example
+    });
+
+console.log("Fetching data from services...");

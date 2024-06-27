@@ -1,0 +1,12 @@
+/* Styles for text elements */
+.title {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: #0066cc;
+}
+
+.paragraph {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #333333;
+}
